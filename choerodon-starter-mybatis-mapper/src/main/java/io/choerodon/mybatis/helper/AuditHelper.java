@@ -2,8 +2,8 @@ package io.choerodon.mybatis.helper;
 
 import java.util.Date;
 
-import io.choerodon.core.oauth.CustomUserDetails;
-import io.choerodon.core.oauth.DetailsHelper;
+//import io.choerodon.core.oauth.CustomUserDetails;
+//import io.choerodon.core.oauth.DetailsHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +33,7 @@ public class AuditHelper {
             audits.set(audit);
         }
         audit.setNow(new Date());
-        CustomUserDetails details = DetailsHelper.getUserDetails();
+        /*CustomUserDetails details = DetailsHelper.getUserDetails();
         if (details != null) {
             audit.setUser(details.getUserId());
         } else {
@@ -41,7 +41,8 @@ public class AuditHelper {
                 audit.setUser(0L);
                 LOGGER.warn("principal not instanceof CustomUserDetails audit user is 0L");
             }
-        }
+        }*/
+        // todo 获取用户信息
         return audit;
     }
 }
